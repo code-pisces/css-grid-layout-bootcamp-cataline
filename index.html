@@ -23,12 +23,11 @@
 
       .container {
         display: grid;
-        grid-template-columns: 1fr 150px;
-        grid-template-rows: auto 500px auto;
-        grid-template-areas: 
-        "header header" 
-        "content nav" /*'content .' para onde seria o nav ser um buraco vazio*/ 
-        "footer footer";
+        grid: 
+        "header" auto 
+        "content" 500px
+        "footer" auto
+        / 1fr;
         gap: 1rem;
       }
 
@@ -42,10 +41,6 @@
 
       .footer {
         grid-area: footer;
-      }
-
-      .nav {
-        grid-area: nav;
       }
     </style>
   </head>
