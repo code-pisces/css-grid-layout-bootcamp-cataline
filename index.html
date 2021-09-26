@@ -22,40 +22,48 @@
       }
 
       .container {
+        height: 500px;
+        background:rgba(255, 255, 255, 0.6);
+        padding: 1rem;
+        border-radius: 5px;
+        /* Grid */
         display: grid;
-        grid: 
-        "header" auto 
-        "content" 500px
-        "footer" auto
-        / 1fr;
+        grid-template-columns: auto auto;
+        grid-template-rows: auto auto;
         gap: 1rem;
+        /* Alinha conteúdo horizontalmente */
+        justify-content: stretch;
+        /* Alinhamento de conteúdo na vertical */
+        align-content: stretch;
+        /* Alinhamento de items na horizontalmente*/
+        justify-items: stretch;
+        /* Alinhamentos de items na vertical */
+        align-items: stretch;
       }
 
-      .header {
-        grid-area: header;
-      }
-
-      .content {
-        grid-area: content;
-      }
-
-      .footer {
-        grid-area: footer;
+      .item:nth-child(1) { /*Alinha um elemento em específico*/
+        justify-self: center;
+        align-self: center;
       }
     </style>
   </head>
   <body>
     <div class="container">
-      <header class="header item">
-        <h1>cabeçalho</h1>
-      </header>
-      <main class="content item">
-        <h1>conteúdo</h1>
-      </main>
-      <footer class="footer item">
-        <h1>rodapé</h1>
-      </footer>
-      <nav class="nav item"><h1>nav</h1></nav>
+      <div class="item">
+        <h1>1</h1>
+      </div>
+     
+      <div class="item">
+        <h1>2</h1>
+      </div>
+
+      <div class="item">
+        <h1>3</h1>
+      </div>
+
+      <div class="item">
+        <h1>4</h1>
+      </div>
     </div>
   </body>
 </html>
