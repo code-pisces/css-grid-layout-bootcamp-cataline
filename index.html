@@ -4,66 +4,21 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css">
+
     <title>CSS Grid Layout</title>
-
-    <style>
-      body {
-        background: #3494e6;
-        height: 100vh;
-        overflow-y: hidden;
-        margin: 2rem;
-        font-family: sans-serif;
-      }
-
-      .item {
-        background: rgba(255, 255, 255, 0.6);
-        border-radius: 5px;
-        /*height: 30px;*/
-      }
-
-      .container {
-        height: 500px;
-        background:rgba(255, 255, 255, 0.6);
-        padding: 1rem;
-        border-radius: 5px;
-        /* Grid */
-        display: grid;
-        grid-template-columns: auto auto;
-        grid-template-rows: auto auto;
-        gap: 1rem;
-        /* Alinha conteúdo horizontalmente */
-        justify-content: stretch;
-        /* Alinhamento de conteúdo na vertical */
-        align-content: stretch;
-        /* Alinhamento de items na horizontalmente*/
-        justify-items: stretch;
-        /* Alinhamentos de items na vertical */
-        align-items: stretch;
-      }
-
-      .item:nth-child(1) { /*Alinha um elemento em específico*/
-        justify-self: center;
-        align-self: center;
-      }
-    </style>
   </head>
   <body>
     <div class="container">
-      <div class="item">
-        <h1>1</h1>
-      </div>
-     
-      <div class="item">
-        <h1>2</h1>
-      </div>
-
-      <div class="item">
-        <h1>3</h1>
-      </div>
-
-      <div class="item">
-        <h1>4</h1>
-      </div>
+      <nav class="menu">
+        <div class="logo">CATALINE</div>
+        <ul class="navegation">
+          <li class="navegation__item">Início</li>
+          <li class="navegation__item">Jornadas</li>
+          <li class="navegation__item">Blog</li>
+          <li class="navegation__item">Login</li>
+        </ul>
+      </nav>
     </div>
   </body>
 </html>

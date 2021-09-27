@@ -1,0 +1,40 @@
+body {
+  background: #3494e6;
+  height: 100vh;
+  overflow-y: hidden;
+  margin: 2rem;
+  font-family: sans-serif;
+}
+
+.container {
+  height: 100%;
+  display: grid;
+  grid-template-columns: 600px;
+  grid-template-rows: auto;
+
+  justify-content: center;
+  align-content: center;
+}
+
+.menu {
+  background: rgba(255, 255, 255, 0.6);
+  border-radius: 5px;
+  padding: .5rem 1rem;
+
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+}
+
+.logo {
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.navegation {
+  list-style: none;
+  display: grid;
+  grid-auto-flow: column;
+  justify-content: end;
+  gap: 1.5rem;
+}
