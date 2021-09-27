@@ -9,32 +9,30 @@ body {
 .container {
   height: 100%;
   display: grid;
-  grid-template-columns: 600px;
+  grid-template-columns: 400px;
   grid-template-rows: auto;
 
   justify-content: center;
   align-content: center;
 }
 
-.menu {
-  background: rgba(255, 255, 255, 0.6);
+.login {
+  background: rgba(255, 225, 255, 0.6);
+  padding: 2rem;
   border-radius: 5px;
-  padding: .5rem 1rem;
 
   display: grid;
-  grid-template-columns: auto 1fr;
-  align-items: center;
+  grid-template-columns: 1fr;
+  grid-auto-rows: auto;
+  gap: 1rem;
+
+  justify-items: center;
 }
 
-.logo {
-  font-weight: bold;
-  text-transform: uppercase;
-}
-
-.navegation {
-  list-style: none;
-  display: grid;
-  grid-auto-flow: column;
-  justify-content: end;
-  gap: 1.5rem;
+.login__text-field {
+  width: 100%;
+  border: 1px solid #eee;
+  padding: 0.3rem;
+  outline: none;
+  border: 5px;
 }
