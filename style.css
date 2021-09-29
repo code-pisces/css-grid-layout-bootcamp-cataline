@@ -1,38 +1,69 @@
 body {
   background: #3494e6;
   height: 100vh;
-  overflow-y: hidden;
-  margin: 2rem;
+  margin: 0;
   font-family: sans-serif;
 }
 
 .container {
   height: 100%;
   display: grid;
-  grid-template-columns: 400px;
-  grid-template-rows: auto;
+  grid-template-columns: 200px 1fr;
+  grid-template-rows: 75px 1fr 75px;
 
-  justify-content: center;
-  align-content: center;
-}
-
-.login {
-  background: rgba(255, 225, 255, 0.6);
-  padding: 2rem;
-  border-radius: 5px;
-
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-auto-rows: auto;
   gap: 1rem;
-
-  justify-items: center;
+  grid-template-areas: 
+  'header header'
+  'aside main'
+  'footer footer';
 }
 
-.login__text-field {
-  width: 100%;
-  border: 1px solid #eee;
-  padding: 0.3rem;
-  outline: none;
-  border: 5px;
+header, aside, main, footer {
+  background: rgba(255, 255, 255, 0.6);
+  display: grid;
+  text-transform: capitalize;
+  align-items: center;
+  justify-content: center;
+}
+
+header {
+  grid-area: header;
+}
+
+aside {
+  grid-area: aside;
+}
+
+main {
+  align-items: stretch;
+  justify-content: stretch;
+  grid-area: main;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  grid-auto-rows: 150px;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.blog-items {
+  background-color: #ec6ead;
+}
+
+footer {
+  grid-area: footer;
+}
+
+@media (max-width: 650px) {
+ aside {
+   display: none;
+ } 
+
+ .container {
+   display: grid;
+   grid-template-columns: 1fr;
+  grid-template-areas: 
+  'header'
+  'main'
+  'footer';
+}
 }
